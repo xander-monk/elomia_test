@@ -1,0 +1,56 @@
+tags:
+- name: users
+  description: users API
+
+paths:
+# [GET] users
+  /users:
+    get:
+      tags:
+      - users
+      summary: Find All Users
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [GET] users/id
+  /users/{id}:
+    get:
+      tags:
+      - users
+      summary: Find User By Id, with messages
+      parameters:
+      - name: id
+        in: path
+        description: User Id
+        required: true
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [GET] onboarding
+  /onboarding:
+    get:
+      tags:
+      - onboarding
+      summary: Get random onboarding document
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+
+schemes:
+ - https
+ - http

@@ -1,0 +1,5 @@
+- Install with `npm i`
+- Fix config in `.env.development.local`
+- Run the Server in development mode : `npm run dev`
+- Run all unit-tests : `npm test`
+- Access *Swagger* - `http://localhost:${PORT}/api/`
